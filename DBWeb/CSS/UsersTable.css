@@ -1,0 +1,13 @@
+﻿.usersTable {
+    text-align:center;
+    width:75%;
+    border:solid 1px;
+}
+    .usersTable td {
+        border: solid 1px;
+    }
+    .usersTable th {
+        border: solid 1px;
+        background-color:lightgray;
+    }
+

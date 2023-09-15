@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="CSS/Login.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+        <table align="center" class="tblHeader">
+            <tr>
+                <td style="width:20%"></td>
+                <td style="width:60%"><img src="/Images/MarkmanLogo.jpg" height="100px"/></td>
+                <td style="width:20%"><%="Wellcom " + Session["userName"] %></td>
+                <td runat="server" id="td"></td>
+            </tr>
+        </table>
+        <div id="mainBar">
+            <ul class="HorBarUl"  >
+                <li>
+                    <a href="Main.aspx">main</a>
+                </li>
+                <li runat="server">
+                    <a href="Register.aspx">Register</a>
+                </li>
+                <li runat="server" id="bar1">
+                    <a href="UsersTable.aspx">Users</a>
+                </li>
+                <li>
+                    <a href="Login.aspx">Login</a>
+                </li>
+                 <li class="dropdown" runat="server" id="bar2">
+                     <a>More</a>
+                     <div class="dropdown-content">
+                        <a href="Login1.aspx">Login1</a>
+                        <a href="Login2.aspx">Login2</a>
+                        <a href="Register2.aspx">Register2</a>
+                        <a href="UsersTable1.aspx">Users1</a>
+                        <a href="UsersTable2.aspx">Users2</a>
+                        <a href="UsersTable3.aspx">Users3</a>
+                     </div>
+                </li>
+
+            </ul>
+        </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+</body>
+</html>
